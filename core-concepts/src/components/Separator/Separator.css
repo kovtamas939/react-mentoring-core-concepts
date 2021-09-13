@@ -1,0 +1,7 @@
+.Separator {
+    width: 15em;
+    height: .1rem;
+    border-radius: 50%;
+    background-color: tan;
+    margin: 2rem;
+}
