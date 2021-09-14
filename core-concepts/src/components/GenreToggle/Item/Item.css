@@ -1,0 +1,17 @@
+.Active-filter {
+    display: inline;
+    padding: .6rem;
+    border-radius: .1rem;
+    margin: 0 .2rem;
+    cursor: pointer;
+    background-color: firebrick
+}
+
+.Not-active-filter {
+    display: inline;
+    padding: .6rem;
+    border-radius: .1rem;
+    margin: 0 .2rem;
+    cursor: pointer;
+    background-color: gray
+}
