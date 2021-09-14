@@ -3,20 +3,15 @@ import React from 'react'
 import './Counter.css'
 
 class Counter extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            number: 0
-        }
-        this.decreaseNumber = this.decreaseNumber.bind(this)
-        this.increaseNumber = this.increaseNumber.bind(this)
+    state = {
+        number: 0
     }
 
-    decreaseNumber() {
+    decreaseNumber = () => {
         this.setState({number: this.state.number - 1})
     }
 
-    increaseNumber() {
+    increaseNumber = () => {
         this.setState({number: this.state.number + 1})
     }
     

@@ -6,37 +6,22 @@ import './GenreToggle.css'
 const GenreToggle = () => {
     const [activeFilter, setFilter] = useState('All');
 
+    const genres = ['All', 'Documentary', 'Comedy', 'Horror', 'Crime']
+
     const handleFilterOnClick = (e) => {
         setFilter(e.target.innerHTML)
     };
 
     return (
         <ul className="Genre-list">
-            <Item 
-                onClick={handleFilterOnClick}
-                activeFilter={activeFilter}
-                itemName='All'>
-            </Item>
-            <Item 
-                onClick={handleFilterOnClick}
-                activeFilter={activeFilter}
-                itemName='Documentary'>
-            </Item>
-            <Item 
-                onClick={handleFilterOnClick}
-                activeFilter={activeFilter}
-                itemName='Comedy'>
-            </Item>
-            <Item
-                onClick={handleFilterOnClick}
-                activeFilter={activeFilter}
-                itemName='Horror'>
-            </Item>
-            <Item
-                onClick={handleFilterOnClick}
-                activeFilter={activeFilter} 
-                itemName='Crime'>
-            </Item>
+            {genres.map((item, index)  => (
+                <Item 
+                    onClick={handleFilterOnClick}
+                    activeFilter={activeFilter}
+                    itemName={item}
+                    key={index} >
+                </Item>
+            ))}
         </ul>
     )
 }
